@@ -13,6 +13,7 @@ const { addTags, getTags, deleteTag } = require('./cntrl/addTags');
 const app = express();
 const upload = multer();
 app.use(json());
+app.use(express.static(`${__dirname}/../build`));
 // app.use(cors());
 
 const { CONNECTION_STRING, SERVER_PORT } = process.env;
