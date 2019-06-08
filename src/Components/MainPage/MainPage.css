@@ -104,10 +104,15 @@ input[type='file'] {
 @media (max-width: 600px) {
   .fileUploadContainer {
     position: fixed;
-    top: 18%;
+    top: 25%;
     width: 100%;
   }
   .fileUploadBox {
     width: 60%;
+  }
+
+  #delete-button {
+    width: 8vw;
+    height: 4vh;
   }
 }

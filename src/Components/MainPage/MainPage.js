@@ -18,7 +18,7 @@ const styles = theme => ({
   },
   picContainer: {
     width: '95%',
-    margin: '100px auto 0px',
+    margin: '200px auto 0px',
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center'
@@ -55,7 +55,19 @@ const styles = theme => ({
   chip: {
     margin: '2%'
   },
-  [theme.breakpoints.down('sm')]: {}
+  [theme.breakpoints.down('sm')]: {
+    dialogContainer: {
+      display: 'flex',
+      flexDirection: 'column'
+    },
+    dialogButtonInputContainer: {
+      height: 200
+    },
+    img: {
+      width: 250,
+      height: 200
+    }
+  }
 });
 
 class MainPage extends Component {
@@ -91,7 +103,7 @@ class MainPage extends Component {
   }
 
   listenScrollEvent = e => {
-    if (window.scrollY > 10) {
+    if (window.scrollY > 100) {
       this.setState({ color: '#89e1ff' });
     } else {
       this.setState({ color: '' });
@@ -227,7 +239,7 @@ class MainPage extends Component {
                   <i className='fas fa-times-circle' id='delete-button' />
                 </div>
                 {newTags}
-                <div>
+                <div style={{ width: '100%' }}>
                   <div className={classes.tagContainer}>
                     <input
                       type='text'
