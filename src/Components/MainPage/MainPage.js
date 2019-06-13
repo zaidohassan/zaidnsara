@@ -23,16 +23,20 @@ const styles = theme => ({
     flexWrap: 'wrap',
     justifyContent: 'center'
   },
+  dialog: {
+    maxWidth: 500,
+    margin: 'auto'
+  },
   media: {
     height: 300
   },
   img: {
-    width: 350,
-    height: '100%'
+    width: 350
   },
   dialogContainer: {
     display: 'flex',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    flexWrap: 'wrap'
   },
   deleteButtonContainer: {
     height: '3vh',
@@ -52,20 +56,26 @@ const styles = theme => ({
   sendTagButton: {
     width: '100%'
   },
+
   chip: {
-    margin: '2%'
+    margin: '4%'
   },
   [theme.breakpoints.down('sm')]: {
     dialogContainer: {
       display: 'flex',
-      flexDirection: 'column'
+      flexDirection: 'column',
+      flexWrap: 'nowrap'
     },
     dialogButtonInputContainer: {
-      height: 200
+      height: 'auto'
     },
     img: {
-      width: 250,
-      height: 200
+      width: '100%'
+    },
+    chip: {
+      '& span': {
+        whiteSpace: 'normal'
+      }
     }
   }
 });
@@ -222,6 +232,7 @@ class MainPage extends Component {
             aria-labelledby='alert-dialog-title'
             aria-describedby='alert-dialog-description'
             fullWidth={true}
+            className={classes.dialog}
           >
             <DialogContent className={classes.dialogContainer}>
               <DialogContentText id='alert-dialog-description'>

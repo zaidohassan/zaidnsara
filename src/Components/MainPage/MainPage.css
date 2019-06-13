@@ -11,6 +11,7 @@
 }
 .container {
   padding-top: 6vh;
+  cursor: pointer;
 }
 .filter_input_container {
   width: 200px;
@@ -24,6 +25,7 @@
   display: flex;
   align-items: center;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .filter_input {
@@ -36,6 +38,7 @@
   transition: 0.4s;
   width: 0px;
   font-family: 'Roboto Slab';
+  cursor: pointer;
 }
 
 .filter_input_container:hover > .filter_input {
